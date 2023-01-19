@@ -9,7 +9,37 @@
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
             <span data-feather="book-open" class="align-text-bottom"></span>
-            Courses
+            Produksi Tebangan Jati
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
+            <span data-feather="book-open" class="align-text-bottom"></span>
+            Produksi Tebangan Rimba
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
+            <span data-feather="book-open" class="align-text-bottom"></span>
+            Produksi Agroforestry Serasah
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
+            <span data-feather="book-open" class="align-text-bottom"></span>
+            Produksi Agroforestry Jagung
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
+            <span data-feather="book-open" class="align-text-bottom"></span>
+            Produksi Agroforestry Lainnya
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
+            <span data-feather="book-open" class="align-text-bottom"></span>
+            Ekowisata
           </a>
         </li>
         <li class="nav-item">

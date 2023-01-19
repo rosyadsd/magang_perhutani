@@ -28,10 +28,10 @@
                   <th scope="col">BKPH</th>
                   <th scope="col">RKAP</th>
                   <th scope="col">RO</th>
+                  <th scope="col">Bulan</th>
                   <th scope="col">Real</th>
                   <th scope="col">%RKAP</th>
                   <th scope="col">%RO</th>
-                  <th scope="col">Bulan</th>
                   <th scope="col">Jumlah KPH</th>
                   <th scope="col">Category</th>
                   {{-- <th scope="col">Created By</th> --}}
@@ -43,14 +43,14 @@
                 @foreach($courses as $course)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $course->bkph }}</td>
-                    <td>{{ $course->rkap }}</td>
-                    <td>{{ $course->ro }}</td>
-                    <td>{{ $course->real }}</td>
-                    <td>{{ $course->persenrkap }}</td>
-                    <td>{{ $course->persenro }}</td>
-                    <td>{{ $course->bulan }}</td>
-                    <td>{{ $course->jumlahkph }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
                     <td>{{ $course->category->name }}</td>
                     {{-- <td>{{ $course->author->name }}</td> --}}
                     <td>{{ $course->created_at->toDateString() }}</td>

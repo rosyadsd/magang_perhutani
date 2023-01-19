@@ -45,110 +45,53 @@ class DatabaseSeeder extends Seeder
         ]);
         
         Category::create([
-            'name' => 'Hot Kitchen',
-            'slug' => 'hot-kitchen',
-            'excerpt' => 'Bagian hot kitchen ini memiliki tugas untuk mengolah semua bahan makanan makanan yang menjadi tugas dari saucier dan entremetier pada srtuktur organisasi versi lengkap. Hot kitchen dibagi menjadi 2 bagian yaitu kitchen banquet dan kitchen a’la carte.'
+            'name' => 'Produksi Tebangan Jati',
+            'slug' => 'produksi-tebangan-jati',
+            'excerpt' => 'Laporan Hasil Produksi Tebangan Jati'
+        ]);
+        Category::create([
+            'name' => 'Produksi Tebangan Rimba',
+            'slug' => 'produksi-tebangan-rimba',
+            'excerpt' => 'Laporan Hasil Produksi Tebangan Rimba'
+        ]);
+
+        Category::create([
+            'name' => 'Produksi Agroforestry Serasah',
+            'slug' => 'produksi-agroforestry-serasah',
+            'excerpt' => 'Laporan Hasil Produksi Agroforestry Serasah'
+        ]);
+
+        Category::create([
+            'name' => 'Produksi Agroforestry Jagung',
+            'slug' => 'produksi-agroforestry-jagung',
+            'excerpt' => 'Laporan Hasil Produksi Agroforestry Jagung'
+        ]);
+
+        Category::create([
+            'name' => 'Produksi Agroforestry Lainnya',
+            'slug' => 'produksi-agroforestry-lainnya',
+            'excerpt' => 'Laporan Hasil Produksi Agroforestry Lainnya'
+        ]);
+
+        Category::create([
+            'name' => 'Ekowisata',
+            'slug' => 'ekowisata',
+            'excerpt' => 'Laporan Hasil Ekowisata'
         ]);
 
         Course::create([
             'category_id' => 1,
             'user_id'=> 1,
-            'title' => 'Nasi Goreng Spesial',
-            'excerpt' => 'Nasi Goreng dikenal sebagai masakan nasional Indonesia dan ditempatkan pada peringkat kedua dalam daftar 50 Makanan Terlezat di Dunia setelah rendang oleh CNN International.',
-            'body' => "<p>Nasi Goreng dikenal sebagai masakan nasional Indonesia dan ditempatkan pada peringkat kedua dalam daftar '50 Makanan Terlezat di Dunia' setelah rendang oleh CNN International.</p>
-            <p>Nasi Goreng Special signature Garuda Indonesia disajikan dengan tumis udang balado, ayam goreng mentega, telur mata sapi dan sambal bajak.
-            Bahan: 
-            </p>
-            <p>- 5 siung bawang putih <br>
-            - 1 cabai merah besar <br>
-            - 10 helai kelopak bunga kecombrang <br>
-            - 2 piring nasi <br>
-            - Garam dan kaldu jamur secukupnya <br>
-            - 5 butir bawang merah besar <br>
-            - 1 batang daun bawang <br>
-            - 1 butir telur <br>
-            - 2 sosis ayam <br>
-            - 1 buang mangga harummanis mengkal, dipotong kotak-kotak <br>
-            - Kacang polong dan irisan wortel secukupnya <br>
-            </p>"
+            'title' => 'Subah',
+            'bkph' => 'Subah',
+            'rkap' => '6098,45999999999',
+            'ro' => '29930934948948',
+            'real' => '219899183928',
+            'persenrkap' => '90%',
+            'persenro' => '20%',
+            'bulan' => 'Januari',
+            'jumlahkph' => '10938476',
         ]);
 
-        Course::create([
-            'category_id' => 1,
-            'user_id'=> 1,
-            'title' => 'Honey Glazed Salmon with Quinoa',
-            'excerpt' => 'Salmon fillet disiram dengan saus teriyaki, disajikan dengan tumisan wortel, timun, labu, daikon ditambah salad quinoa, potongan cabai, daun bawang, dan edamame kukus.',
-            'body' => "<p>Salmon fillet disiram dengan saus teriyaki, disajikan dengan tumisan wortel, timun, labu, daikon ditambah salad quinoa, potongan cabai, daun bawang, dan edamame kukus. </p>
-            <p>Bahan: </p>
-            <p>- 5 siung bawang putih
-            - 1 cabai merah besar
-            - 10 helai kelopak bunga kecombrang
-            - 2 piring nasi
-            - Garam dan kaldu jamur secukupnya
-            - 5 butir bawang merah besar
-            - 1 batang daun bawang
-            - 1 butir telur
-            - 2 sosis ayam
-            - 1 buang mangga harummanis mengkal, dipotong kotak-kotak
-            - Kacang polong dan irisan wortel secukupnya
-            </p>"
-        ]);
-
-        Course::create([
-            'category_id' => 1,
-            'user_id'=> 1,
-            'title' => 'Poach Salmon, mashed potato, and Asparagus',
-            'excerpt' => 'Kombinasi ikan salmon yang direbus akan membawa perpaduan rasa dan tekstur yang unik di lidah Anda. Bersama mashed potato, asparagus, dan grilled tomato akan melengkapi kelezatan menu ini, namun tetap memenuhi kadar kebutuhan kalori Anda yang mempunyai alergi terhadap gluten.',
-            'body' => "<p>Kombinasi ikan salmon yang direbus akan membawa perpaduan rasa dan tekstur yang unik di lidah Anda.</p>
-            <p>Kombinasi ikan salmon yang direbus akan membawa perpaduan rasa dan tekstur yang unik di lidah Anda.</p>
-            <p>Avocado puree, diblender:</p>
-            <p>- 1 sdm unsalted butter (lelehkan)
-            - 1/2 buah alpukat
-            - 1 sdm gula
-            - 1 sdt garam
-            - 3 sdm air
-            - 2 sdm extra virgin olive oil
-            - 1 sdt air lemon
-            Bahan garnish:
-            - Buncis tumis
-            - 1/2 buah paprika kuning tumis
-            - Ceri (opsional)
-            Salmon, dimarinasi dengan semua bahan:
-            - 400 gr salmon dibagi 2
-            - Garam dan lada hitam
-            - Air lemon
-            - Olive oil
-            </p>"
-        ]);
-
-        Category::create([
-            'name' => 'Cold Kitchen',
-            'slug' => 'cold-kitchen',
-            'excerpt' => 'Kitchen yang merupakan tempat pengolahan bahan-bahan makanan yang membuat hidangan pembuka (cold appetizer), juga membuat cold souce seperti mayonaise, thousand island, callipso, souce, dll. Outlet ini juga menangani pengolahan buah-buahan.'
-        ]);
-
-        Category::create([
-            'name' => 'Pastry',
-            'slug' => 'pastry',
-            'excerpt' => 'Pastry dikenal sebagai roti yang diolah dengan cara panggang. Roti ini biasanya terbuat dari gula, susu, mentega, lemak, bubuk pemuai dan/atau telur. Terdapat beberapa jenis produk pastry yang terkenal. Mulai dari choux pastry, croissant pastry, dll.'
-        ]);
-
-        Category::create([
-            'name' => 'Vegetable',
-            'slug' => 'vegetable',
-            'excerpt' => 'Memiliki hidup yang sehat jadi salah satu impian banyak orang. Bisa menikmati berbagai aktivitas dengan mudah, selalu fokus dalam menyelesaikan pekerjaan, hingga merasa bahagia setiap harinya. Tentu hal ini bisa kamu dapatkan dengan.'
-        ]);
-
-        Category::create([
-            'name' => 'Alcohol',
-            'slug' => 'alcohol',
-            'excerpt' => 'Alkohol berawal dari senyawa kimia hidrokarbon yang terdiri dari dua atom, yaitu karbon (C) dan hidrogen (H). Berdasarkan tiga jenis ikatan pada hidrokarbon, salah satunya adalah alkana, kita bisa lihat kalau alkohol merupakan turunan dari alkana.'
-        ]);
-
-        Category::create([
-            'name' => 'Coffee',
-            'slug' => 'coffee',
-            'excerpt' => 'Kopi adalah minuman hasil seduhan biji kopi yang telah disangrai dan dihaluskan menjadi bubuk.[2] Kopi merupakan salah satu komoditas di dunia yang dibudidayakan lebih dari 50 negara. Spesies pohon kopi yang dikenal secara umum yaitu Kopi Robusta.'
-        ]);
     }
 }
