@@ -22,7 +22,7 @@
     {{-- Carousel News --}}
     
     {{-- Title --}}
-    <title>myLearn | {{ $title }}</title>
+    <title>Perhutani KPH Kendal | {{ $title }}</title>
     {{-- <link rel="icon" href="https://learning-aic.aerofood.co.id/Elegantic/images/favicon.png" type="image/x-icon"> --}}
     <link rel="icon" href="/img/logoperhutani.png" type="image/x-icon">
   </head>
