@@ -25,7 +25,14 @@
               <thead class="table-dark">
                 <tr>
                   <th scope="col">No.</th>
-                  <th scope="col">Title</th>
+                  <th scope="col">BKPH</th>
+                  <th scope="col">RKAP</th>
+                  <th scope="col">RO</th>
+                  <th scope="col">Bulan</th>
+                  <th scope="col">Real</th>
+                  <th scope="col">%RKAP</th>
+                  <th scope="col">%RO</th>
+                  <th scope="col">Jumlah KPH</th>
                   <th scope="col">Category</th>
                   {{-- <th scope="col">Created By</th> --}}
                   <th scope="col">Created At</th>
@@ -36,6 +43,13 @@
                 @foreach($courses as $course)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
+                    <td>{{ $course->title }}</td>
                     <td>{{ $course->title }}</td>
                     <td>{{ $course->category->name }}</td>
                     {{-- <td>{{ $course->author->name }}</td> --}}

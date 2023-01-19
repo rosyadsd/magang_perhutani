@@ -18,7 +18,7 @@
                 <div class="card-body">
                 <h5 class="card-title">{{ $course->title }}</h5>
                 <p class="card-text">{{ $course->excerpt }}</p>
-                <a href="/course/{{ $course->id }}" class="btn btn-primary px-5">Learn</a>
+                <a href="/course/{{ $course->id }}" class="btn btn-primary px-5">Buka</a>
                 </div>
             </div>
             @endforeach

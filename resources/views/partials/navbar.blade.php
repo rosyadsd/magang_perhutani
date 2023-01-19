@@ -1,14 +1,14 @@
 <style>
   .gradient{
-    background-image: linear-gradient(#87CEEB, #AFEEEE)
+    background-image: linear-gradient(#F2FAF4, #FDFEFD)
   }
+
 </style>
 <nav class="navbar navbar-expand-lg navbar-light gradient" >
-{{-- style="background-color: #e3f2fd;"> --}}
-    <div class="container">
+{{-- style="background-color: #2DB854;"> --}}
+    <div class="container">    
     <a class="navbar-brand" href="/">
-        {{-- <img src="https://learning-aic.aerofood.co.id/Elegantic/images/ALC.png" alt="" length="60" height="30" class="d-inline-block align-text-top"> --}}
-        <img src="/img/logo-1.png" alt="" length="80" height="30" class="d-inline-block align-text-top">
+        <img src="/img/perhutani.png" alt="" length="100" height="60" class="d-inline-block align-text-top">
     </a>
       {{-- <a class="navbar-brand" href="/">Aerofood e-Learning</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
             <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/" >Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('category*') ? 'active' : '' }}" href="/category" >Courses</a>
+            <a class="nav-link {{ Request::is('category*') ? 'active' : '' }}" href="/category" >Laporan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ Request::is('feedback*') ? 'active' : '' }}" href="/feedback" >Feedback</a>

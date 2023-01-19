@@ -18,9 +18,14 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->String('title');
-            $table->String('image')->nullable();
-            $table->text('excerpt');
-            $table->text('body');
+            $table->String('bkph');
+            $table->String('rkap');
+            $table->String('ro');
+            $table->String('real');
+            $table->String('persenrkap');
+            $table->String('persenro');
+            $table->String('bulan');
+            $table->String('jumlahkph');
             $table->timestamps();
             $table->softDeletes();
         });

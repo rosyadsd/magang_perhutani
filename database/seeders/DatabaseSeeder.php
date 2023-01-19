@@ -29,17 +29,17 @@ class DatabaseSeeder extends Seeder
         // Kategori 1
 
         User::create([
-            'name' => 'Fauzan Zaman',
-            'username' => 'fauzanz',
-            'email' => 'fauzan12356@gmail.com',
+            'name' => 'Rosyad Shidqi Dikpimmmas',
+            'username' => 'rosyadsd',
+            'email' => 'rosyadsd@gmail.com',
             'is_super' => 1,
             'password' => bcrypt('12345')
         ]);
 
         User::create([
-            'name' => 'Syahrul Ramadhan',
-            'username' => 'syahrulganz',
-            'email' => 'syahrul@gmail.com',
+            'name' => 'Imam Nur Alim',
+            'username' => 'imamalim',
+            'email' => 'imamalim@gmail.com',
             'is_super' => 0,
             'password' => bcrypt('12345')
         ]);
