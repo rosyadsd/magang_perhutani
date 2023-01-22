@@ -6,8 +6,8 @@
 @extends("layouts.main")
 @section("container")
 
-    <div class="container">
-        <div class="row row-cols-3"  >
+    <div class="container pt-5">
+        <div class="row row-cols-3 pt-4"  >
 
           @foreach($categories as $category)
           
