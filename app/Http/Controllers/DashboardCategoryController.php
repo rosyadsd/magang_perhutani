@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Models\Category;
-use App\Models\Course;
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class DashboardCategoryController extends Controller
@@ -62,7 +62,7 @@ class DashboardCategoryController extends Controller
 
     public function destroy(Category $category)
     {
-        Course::destroy($category->courses);
+        Laporan::destroy($category->laporans);
         Category::destroy($category->id);
         return redirect('/dashboard/categories')->with('success', 'Category has been deleted');
     }

@@ -1,5 +1,5 @@
 <style>
-  .course{
+  .laporan{
     color: black;
   }
 </style>

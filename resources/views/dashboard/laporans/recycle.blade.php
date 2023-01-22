@@ -16,10 +16,10 @@
     <div class="card mb-2">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Deleted Courses
+            Deleted Laporan
         </div>
         <div class="card-body">
-            <table class="table table-bordered" id="courses-table">
+            <table class="table table-bordered" id="laporans-table">
               <thead class="table-dark">
                 <tr>
                   <th scope="col">No.</th>
@@ -31,16 +31,16 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach($courses as $course)
+                @foreach($laporans as $laporan
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $course->title }}</td>
-                    <td>{{ $course->category->name }}</td>
-                    {{-- <td>{{ $course->author->name }}</td> --}}
-                    <td>{{ $course->deleted_at->toDateString() }}</td>
+                    <td>{{ $laporan->title }}</td>
+                    <td>{{ $laporan->category->name }}</td>
+                    {{-- <td>{{ $laporan->author->name }}</td> --}}
+                    <td>{{ $laporan->deleted_at->toDateString() }}</td>
                     <td>
-                      <a href="/dashboard/courses/restore/{{ $course->id }}" class="badge bg-success"><span data-feather="rotate-ccw"></span></a>
-                      <form action="/dashboard/courses/delete/{{ $course->id }}" method="POST" class="d-inline">
+                      <a href="/dashboard/laporans/restore/{{ $laporan->id }}" class="badge bg-success"><span data-feather="rotate-ccw"></span></a>
+                      <form action="/dashboard/laporans/delete/{{ $laporan->id }}" method="POST" class="d-inline">
                         @csrf
                         <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><span data-feather="trash-2"></span></button>
                       </form>
@@ -53,13 +53,13 @@
     </div>
   </div>
 
-<a href="/dashboard/courses" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="arrow-left"></span> Back</a>
+<a href="/dashboard/laporans" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="arrow-left"></span> Back</a>
 
     {{-- Data Tables --}}
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
     <script>
-    $('#courses-table').DataTable({});
+    $('#laporans-table').DataTable({});
     </script>
 
 @endsection

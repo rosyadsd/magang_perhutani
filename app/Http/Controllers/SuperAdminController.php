@@ -49,9 +49,9 @@ class SuperAdminController extends Controller
         ]);
     }
 
-    public function restore($courseId)
+    public function restore($laporanId)
     {
-        User::onlyTrashed()->find($courseId)->restore();
+        User::onlyTrashed()->find($laporanId)->restore();
         return redirect('/dashboard/users/recycle')->with('success', 'Admin has been restored');
     }
 

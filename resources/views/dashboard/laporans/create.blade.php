@@ -6,7 +6,7 @@
 
 <div class="row mb-5">
     <div class="col-lg-8">
-        <form method="POST" action="/dashboard/courses" class="mb-5" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard/laporans" class="mb-5" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
               <label for="ro" class="form-label">RO</label>

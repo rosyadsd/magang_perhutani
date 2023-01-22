@@ -6,8 +6,9 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 use App\Models\Category;
-use App\Models\Course;
+use App\Models\Laporan;
 use App\Models\User;
+use App\Models\Bkph;
 
 class DatabaseSeeder extends Seeder
 {
@@ -79,18 +80,16 @@ class DatabaseSeeder extends Seeder
             'excerpt' => 'Laporan Hasil Ekowisata'
         ]);
 
-        Course::create([
+        Laporan::create([
             'category_id' => 1,
             'user_id'=> 1,
-            'title' => 'Subah',
-            'bkph' => 'Subah',
-            'rkap' => '6098,45999999999',
-            'ro' => '29930934948948',
-            'real' => '219899183928',
-            'persenrkap' => '90%',
-            'persenro' => '20%',
+            'rkap' => 'Subah',
+            'ro' => 'Subah',
+            'real' => '6098,45999999999',
+            'persen_rkap' => '90%',
+            'persen_ro' => '20%',
             'bulan' => 'Januari',
-            'jumlahkph' => '10938476',
+            'jumlah_kph' => '10938476',
         ]);
 
     }

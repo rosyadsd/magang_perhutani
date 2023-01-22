@@ -32,7 +32,7 @@
         @yield('container')
     </div>
 
-    {{-- @if ($active === 'homepage' || $active === 'courses')
+    {{-- @if ($active === 'homepage' || $active === 'laporans')
     @endif --}}
     @include('partials.footer')
     

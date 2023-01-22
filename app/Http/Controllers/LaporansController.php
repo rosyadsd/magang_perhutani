@@ -2,31 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
+use App\Models\Laporan;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CoursesController extends Controller
+class LaporansController extends Controller
 {
     public function index() {
         return view('category', [
-            'title' => 'Courses',
+            'title' => 'Laporans',
             'categories' => Category::paginate(6)
         ]);
     }
 
     public function show(Category $category){
-        return view('courses', [
+        return view('laporans', [
             'title' => $category->name,
-            'courses' => $category->courses
+            'laporans' => $category->laporans
         ]);
     }
 
-    public function getCourse(Course $course){
-        return view('course', [
-            'title' => $course->title,
-            'course' => $course
+    public function getLaporan(Laporan $laporan){
+        return view('laporan', [
+            'title' => $laporan->title,
+            'laporan' => $laporan
         ]);
     }
 }

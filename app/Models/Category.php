@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Course;
+use App\Models\Laporan;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -15,8 +15,8 @@ class Category extends Model
 
     protected $guarded = ['id'];
 
-    public function courses() {
-        return $this->hasMany(Course::class);
+    public function laporans() {
+        return $this->hasMany(Laporan::class);
     }
 
     public function sluggable(): array

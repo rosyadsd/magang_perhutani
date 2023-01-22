@@ -7,45 +7,21 @@
 
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
+          <a class="nav-link {{ Request::is('dashboard/laporans*') ? 'active' : ''}}" aria-current="page" href="/dashboard/laporans">
             <span data-feather="book-open" class="align-text-bottom"></span>
-            Produksi Tebangan Jati
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
-            <span data-feather="book-open" class="align-text-bottom"></span>
-            Produksi Tebangan Rimba
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
-            <span data-feather="book-open" class="align-text-bottom"></span>
-            Produksi Agroforestry Serasah
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
-            <span data-feather="book-open" class="align-text-bottom"></span>
-            Produksi Agroforestry Jagung
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
-            <span data-feather="book-open" class="align-text-bottom"></span>
-            Produksi Agroforestry Lainnya
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/courses*') ? 'active' : ''}}" aria-current="page" href="/dashboard/courses">
-            <span data-feather="book-open" class="align-text-bottom"></span>
-            Ekowisata
+            Laporan
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : ''}}" href="/dashboard/categories">
             <span data-feather="layers" class="align-text-bottom"></span>
-            Categories
+            Kategori
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/bkphs*') ? 'active' : ''}}" href="/dashboard/bkphs">
+            <span data-feather="layers" class="align-text-bottom"></span>
+            BKPH
           </a>
         </li>
         <li class="nav-item">

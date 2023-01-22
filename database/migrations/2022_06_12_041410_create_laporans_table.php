@@ -13,19 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('laporans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->String('title');
-            $table->String('bkph');
             $table->String('rkap');
             $table->String('ro');
             $table->String('real');
-            $table->String('persenrkap');
-            $table->String('persenro');
+            $table->String('persen_rkap');
+            $table->String('persen_ro');
             $table->String('bulan');
-            $table->String('jumlahkph');
+            $table->String('jumlah_bkph');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -38,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('laporans');
     }
 };

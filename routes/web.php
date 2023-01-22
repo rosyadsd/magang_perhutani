@@ -3,11 +3,13 @@
 use App\Http\Controllers\ChangePasswordController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\LaporansController;
+use App\Http\Controllers\BkphController;
 use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\DashboardLaporanController;
+use App\Http\Controllers\DashboardBkphController;
 use App\Http\Controllers\DashboardFeedbackController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\SuperAdminController;
@@ -47,18 +49,25 @@ Route::get('/login',[LoginController::class, 'index'])->name('login')->middlewar
 Route::post('/login',[LoginController::class, 'authenticate']);
 Route::post('/logout',[LoginController::class, 'logout']);
 
-// Courses Route
-Route::get('/category', [CoursesController::class, 'index']);
-Route::get("/course/{course}",[CoursesController::class, 'getCourse']);
-Route::get('/dashboard/courses/recycle', [DashboardCourseController::class, 'recycle']);
-Route::get('/dashboard/courses/restore/{course}', [DashboardCourseController::class, 'restore']);
-Route::post('/dashboard/courses/delete/{course}', [DashboardCourseController::class, 'delete']);
-Route::resource('/dashboard/courses', DashboardCourseController::class)->middleware('auth');
+// Laporans Route
+Route::get('/category', [LaporansController::class, 'index']);
+Route::get("/laporan/{laporan}",[LaporansController::class, 'getLaporan']);
+Route::get('/dashboard/laporans/recycle', [DashboardLaporanController::class, 'recycle']);
+Route::get('/dashboard/laporans/restore/{laporan}', [DashboardLaporanController::class, 'restore']);
+Route::post('/dashboard/laporans/delete/{laporan}', [DashboardLaporanController::class, 'delete']);
+Route::resource('/dashboard/laporans', DashboardLaporanController::class)->middleware('auth');
 
 // Categories Route
-Route::get('/category/{category:slug}',[CoursesController::class, 'show']);
+Route::get('/category/{category:slug}',[LaporansController::class, 'show']);
 Route::resource('/dashboard/categories', DashboardCategoryController::class)->except('show')->middleware('auth');
 Route::get('/dashboard/categories/fillSlug', [DashboardCategoryController::class, 'fillSlug']);
+
+// Bkph Route
+Route::get('/bkph',[BkphController::class,'index']);
+Route::get('/dashboard/bkphs/recycle', [DashboardBkphController::class, 'recycle']);
+Route::get('/dashboard/bkphs/restore/{bkph}', [DashboardBkphController::class, 'restore']);
+Route::post('/dashboard/bkphs/delete/{bkph}', [DashboardBkphController::class, 'delete']);
+Route::resource('/dashboard/bkphs', DashboardBkphController::class)->middleware('auth');
 
 // User Controller
 Route::get('/dashboard/users/recycle', [SuperAdminController::class, 'recycle']);

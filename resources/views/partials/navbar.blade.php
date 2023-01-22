@@ -33,7 +33,7 @@
             {{ auth()->user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/dashboard/courses"><i class="bi bi-layout-text-window-reverse"></i> Dashboard </a></li>
+            <li><a class="dropdown-item" href="/dashboard/laporans"><i class="bi bi-layout-text-window-reverse"></i> Dashboard </a></li>
             <li><hr class="dropdown-divider"></li>
             <li>
               <form action="/logout" method="POST">
