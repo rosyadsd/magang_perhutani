@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bkph;
 use Illuminate\Http\Request;
+use App\Models\Laporan;
 
 class DashboardBkphController extends Controller
 {
@@ -44,13 +45,10 @@ class DashboardBkphController extends Controller
     {
         
         $validatedData = $request->validate([
-            'nama_bkph' => ['required|max:255'],
-            'alamat_bkph' => ['required'],
-            'no_telepone' => ['required'],
+            'nama_bkph' => 'required|max:255',
+            'alamat_bkph' => 'required',
+            'no_telepon' => 'required',
         ]);
-
-        $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200, '...');
 
         Bkph::where('id', $bkph->id)->update($validatedData);
         return redirect('/dashboard/bkphs')->with('success', 'Bkph has been updated');

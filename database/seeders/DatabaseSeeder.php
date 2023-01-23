@@ -83,6 +83,7 @@ class DatabaseSeeder extends Seeder
         Laporan::create([
             'category_id' => 1,
             'user_id'=> 1,
+            'bkph_id'=> 1,
             'rkap' => 'Subah',
             'ro' => 'Subah',
             'real' => '6098,45999999999',

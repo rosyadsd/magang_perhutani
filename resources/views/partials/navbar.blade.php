@@ -23,8 +23,13 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px; font-weight: 400; color: white">
             {{ auth()->user()->name }}
           </a>
+<<<<<<< HEAD
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
             <li><a class="dropdown-item" href="/dashboard/courses"><i class="bi bi-layout-text-window-reverse" ></i> Dashboard </a></li>
+=======
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/dashboard/laporans"><i class="bi bi-layout-text-window-reverse"></i> Dashboard </a></li>
+>>>>>>> 150be47 (update Keempat)
             <li><hr class="dropdown-divider"></li>
             <li>
               <form action="/logout" method="POST">

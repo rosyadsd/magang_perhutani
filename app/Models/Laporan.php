@@ -16,6 +16,10 @@ class Laporan extends Model
     public function category(){
         return $this->belongsTo(Category::class, 'category_id');
     }
+    
+    public function bkph(){
+        return $this->belongsTo(Bkph::class, 'bkph_id');
+    }
 
     public function author(){
         return $this->belongsTo(User::class, 'user_id');

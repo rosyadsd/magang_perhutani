@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Laporan;
 use App\Models\Category;
+use App\Models\Bkph;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -13,14 +14,15 @@ class DashboardLaporanController extends Controller
     public function index()
     {
         return view('dashboard.laporans.index', [
-            'laporans' => Laporan::all()
+            'laporans' => Laporan::all(), 'bkphs' => Bkph::all()
         ]);
     }
 
     public function create()
     {
         return view('dashboard.laporans.create',[
-            'categories' => Category::all()
+            'categories' => Category::all(), 'bkphs' => Bkph::all()
+            
         ]);
     }
 
@@ -29,13 +31,9 @@ class DashboardLaporanController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'category_id' => 'required',
-            'image' => 'image|file',
+            'bkph_id' => 'required',
             'body' => 'required'
         ]);
-
-        if($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('laporan-images');
-        }
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200, '...');
@@ -58,6 +56,10 @@ class DashboardLaporanController extends Controller
             'laporan' => $laporan,
             'categories' => Category::all()
         ]);
+        return view('dashboard.laporans.edit',[
+            'laporan' => $laporan,
+            'bkphs' => Bkph::all()
+        ]);
     }
 
     public function update(Request $request, Laporan $laporan)
@@ -66,16 +68,9 @@ class DashboardLaporanController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'category_id' => 'required',
-            'image' => 'image|file',
+            'bkph_id' => 'required',
             'body' => 'required'
         ]);
-
-        if($request->file('image')) {
-            if($request->oldImage){
-                Storage::delete($request->oldImage);
-            }
-            $validatedData['image'] = $request->file('image')->store('laporan-images');
-        }
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200, '...');
@@ -87,9 +82,7 @@ class DashboardLaporanController extends Controller
 
     public function destroy(Laporan $laporan)
     {
-        // if($laporan->image){
-        //     Storage::delete($laporan->image);
-        // }
+
         Laporan::destroy($laporan->id);
         return redirect('/dashboard/laporans')->with('success', 'Laporan has been deleted');
     }
@@ -109,10 +102,7 @@ class DashboardLaporanController extends Controller
 
     public function delete($laporanId)
     {
-        // $laporan = Laporan::onlyTrashed()->where('id', $laporanId)->get();
-        // if($laporan->image){
-        //     Storage::delete($laporan->image);
-        // }
+
         Laporan::onlyTrashed()->find($laporanId)->forceDelete();
         return redirect('/dashboard/laporans/recycle')->with('success', 'Laporan has been deleted');
     }

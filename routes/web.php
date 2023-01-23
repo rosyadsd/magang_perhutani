@@ -51,6 +51,7 @@ Route::post('/logout',[LoginController::class, 'logout']);
 
 // Laporans Route
 Route::get('/category', [LaporansController::class, 'index']);
+Route::get('/bkph', [LaporansController::class, 'index']);
 Route::get("/laporan/{laporan}",[LaporansController::class, 'getLaporan']);
 Route::get('/dashboard/laporans/recycle', [DashboardLaporanController::class, 'recycle']);
 Route::get('/dashboard/laporans/restore/{laporan}', [DashboardLaporanController::class, 'restore']);

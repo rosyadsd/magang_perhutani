@@ -9,7 +9,7 @@ class BkphController extends Controller
 {
     public function index()
     {
-        return view('bkph.index',[
+        return view('bkphs.index',[
             'title' => 'Bkph',
         ]);
     }
@@ -24,6 +24,6 @@ class BkphController extends Controller
 
         Feedback::create($validatedData);
 
-        return redirect('/bkph')->with('success','Feedback Sent!');
+        return redirect('/bkphs')->with('success','Feedback Sent!');
     }
 }
