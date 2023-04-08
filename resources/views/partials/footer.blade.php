@@ -1,110 +1,64 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
+<footer class="text-center text-lg-start bg-white text-muted shadow-lg">
 
   <!-- Section: Links  -->
   <section class="">
-    <div class="container text-center text-md-start mt-5">
+    <div class="container py-5 text-center text-md-start" >
       <!-- Grid row -->
-      <div class="row mt-3">
+      <div class="row gap-md-5">
+
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <div class="col-lg mb-5 mb-md-0 text-lg-start">
           <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>
-            <img class="company" src="/img/perhutani.png"></img>
-          </h6>
-          <p>
-            Perhutani adalah salah satu company bla bla 
-            bla, disini kami mengajak anda agar sadar terhadap lingkungan
-            mari bersama sama menjaga alam kita.
-          </p>
+          <div class="mb-4">
+						<div class="row align-items-center">
+							<div class="col-auto">
+								<img src="https://www.perhutani.co.id/wp-content/themes/perhutani2022/assets/images/logo.png" alt="" class="img-fluid">
+							</div>
+							<div class="col-auto">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Logo_BUMN_Untuk_Indonesia_2020.svg/2560px-Logo_BUMN_Untuk_Indonesia_2020.svg.png" alt="" height="30">
+							</div>
+						</div>
+					</div>
+          <div class="desc">
+          Perhutani adalah Badan Usaha Milik Negara berbentuk Perusahaan Umum (Perum)
+          yang memiliki tugas dan wewenang untuk mengelola sumberdaya hutan negara
+          di pulau Jawa dan Madura. Peran strategis Perhutani adalah mendukung sistem
+          kelestarian lingkungan, sistem sosial budaya dan sistem perekonomian masyarakat perhutanan.
+          </div>
         </div>
+
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div class="col-md col-lg-auto mb-5 mb-md-0 text-lg-start">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Sosial Media
-          </h6>
+          <h5 class="text-uppercase fw-bold mb-4"> Sosial Media </h5>
           <p>
-            <a href="#!" class="text-reset">instagram</a>
+            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/perhutani_kph_kendal/" target="_blank" class="text-reset">Instagram </a>
           </p>
           <p>
-            <a href="#!" class="text-reset">twitter</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">facebook</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">youtube </a>
+            <i class="bi bi-facebook"></i> <a href="https://www.facebook.com/kph.kendal/" target="_blank" class="text-reset">Facebook</a>
           </p>
         </div>
 
-
         <!-- Grid column -->
-
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div class="col-md col-lg-auto mb-5 mb-md-0 text-lg-start">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">  Hubungi Kami</h6>
-          <p><i class="fas fa-home me-3 text-secondary"></i> Jl. Soekarno Hatta No. 322 Kendal
-</p>
-          <p>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
-            perhutanikphkendal@gmail.com
-          </p>
-          <p><i class="fas fa-phone me-3 text-secondary"></i> Phone: 0294 381350</p>
-          
+          <h5 class="text-uppercase fw-bold mb-4">  Hubungi Kami </h5>
+          <p> <i class="bi bi-map"></i> Jl. Soekarno Hatta No. 322 Kendal </p>
+          <p> <i class="bi bi-envelope"></i> <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=kph.kendal@perhutani.co.id" target="_blank" class="text-reset">kph.kendal@perhutani.co.id</a> </p>
         </div>
         <!-- Grid column -->
+
       </div>
       <!-- Grid row -->
     </div>
-    </section>
+  </section>
   <!-- Section: Links  -->
 
   <!-- Copyright -->
-  <div class="text-light text-center p-4" style="background-color: #006342;">
-    © 2023 Copyright:
-    <a class="text-light fw-bold" href="https://mdbootstrap.com/">Perhutani KPH Kendal</a>
+  <div class="text-light text-center p-4" style="background-color: #006342;"> © 2023 Copyright:
+    <b class="text-light" > Perhutani KPH Kendal</b>
   </div>
   <!-- Copyright -->
 </footer>
-<!-- Footer -->
+<!-- Footer -->
