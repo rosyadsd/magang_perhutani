@@ -61,14 +61,23 @@ class DashboardCategoryController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
+            // Upload image
             $image = $request->file('image');
             $filename = time() . '_' . $image->getClientOriginalName();
             $image->storeAs('public/images', $filename);
-            $validatedData['image'] = $filename;
-    
-            // delete the old image file
-            Storage::delete('storage/images/' . $category->image);
+           
+        // Delete image
+        if (isset($validatedData['image'])) {
+            Storage::delete('public/images/' . $validatedData['image']);
         }
+            // delete the old image file
+            // Storage::delete('storage/images/' . $category->image);
+
+
+            $validatedData['image'] = $filename;
+        }
+
+        
     
         $category->update($validatedData);
         

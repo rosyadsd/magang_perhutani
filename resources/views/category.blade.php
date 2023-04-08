@@ -13,7 +13,17 @@
           
           <div class="col " >
             <div class="card mb-3 " style="max-width: 540px; border-radius: 15px;">
-            <img src="{{ $category->image_url }}" class="img-fluid rounded-top" alt="" class="img-fluid">
+            <style>
+             .img-fluid {
+                max-width: 100%;
+                height: auto;
+              }
+              .rounded-top {
+                max-height: 300px;
+                 width: auto;
+               }
+            </style>
+            <img src="{{ $category->image_url }}" class="img-fluid rounded-top" alt="" class="img-fluid" >
                  
                 <div class="card-body text-center">
                     <h5 class="card-title fs-4 d-flex justify-content-center">{{ $category->name }}</h5>
