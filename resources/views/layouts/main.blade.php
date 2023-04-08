@@ -1,6 +1,6 @@
 <style>
   .gradient2{
-    background-image: linear-gradient(#F0F7F2, #51A669)
+    background-image: #ffffff
   }
 </style>
 <!doctype html>
