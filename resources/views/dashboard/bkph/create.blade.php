@@ -25,9 +25,9 @@
               </div>
               @enderror
               <div class="mb-3">
-              <label for="no_telepon" class="form-label">No Telephone</label>
-              <input type="text" class="form-control @error('no_telepon') is-invalid @enderror" id="no_telepon" name="no_telepon" value="{{ old('no_telepon') }}">
-              @error('no_telepon')
+              <label for="email" class="form-label">Alamat Email</label>
+              <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+              @error('email')
               <div class="invalid-feedback">
                 {{ $message }}
               </div>

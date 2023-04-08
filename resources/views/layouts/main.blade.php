@@ -22,8 +22,7 @@
     {{-- Carousel News --}}
     
     {{-- Title --}}
-    <title>Perhutani KPH Kendal | {{ $title }}</title>
-    {{-- <link rel="icon" href="https://learning-aic.aerofood.co.id/Elegantic/images/favicon.png" type="image/x-icon"> --}}
+    <title>Perhutani KPH Kendal</title>
     <link rel="icon" href="/img/logoperhutani.png" type="image/x-icon">
   </head>
   <body class="d-flex flex-column min-vh-100 gradient2">
@@ -38,5 +37,6 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    @yield('footer')
   </body>
 </html>

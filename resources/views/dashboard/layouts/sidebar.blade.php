@@ -24,12 +24,6 @@
             BKPH
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/feedbacks*') ? 'active' : ''}}" href="/dashboard/feedbacks">
-            <span data-feather="message-circle" class="align-text-bottom"></span>
-            Feedback
-          </a>
-        </li>
       </ul>
 
       @can('superadmin')

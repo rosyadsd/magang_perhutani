@@ -27,7 +27,7 @@
                   <th scope="col">No.</th>
                   <th scope="col">Nama BKPH</th>
                   <th scope="col">Alamat</th>
-                  <th scope="col">No. Telephone</th>
+                  <th scope="col">Alamat Email</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -37,7 +37,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $bkph->nama_bkph }}</td>
                     <td>{{ $bkph->alamat_bkph }}</td>
-                    <td>{{ $bkph->no_telepon }}</td>
+                    <td>{{ $bkph->email }}</td>
                     <td>
                       <a href="/dashboard/bkphs/{{ $bkph->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
                       <form action="/dashboard/bkphs/{{ $bkph->id }}" method="POST" class="d-inline">

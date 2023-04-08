@@ -18,13 +18,12 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->foreignId('bkph_id');
+            $table->foreignId('bulan_id');
             $table->String('rkap');
             $table->String('ro');
-            $table->String('real');
-            $table->String('persen_rkap');
-            $table->String('persen_ro');
-            $table->String('bulan');
-            $table->String('jumlah_bkph');
+            $table->String('real')->nullable();
+            $table->String('persen_rkap')->nullable();
+            $table->String('persen_ro')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

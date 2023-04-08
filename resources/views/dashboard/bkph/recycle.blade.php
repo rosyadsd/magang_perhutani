@@ -25,7 +25,7 @@
                   <th scope="col">No.</th>
                   <th scope="col">Nama BKPH</th>
                   <th scope="col">Alamat BKPH</th>
-                  <th scope="col">No. Telephone</th>
+                  <th scope="col">Alamat Email</th>
                   <th scope="col">Deleted At</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -36,7 +36,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $bkph->nama_bkph }}</td>
                     <td>{{ $bkph->alamat_bkph }}</td>
-                    <td>{{ $bkph->no_telepon }}</td>
+                    <td>{{ $bkph->email}}</td>
                     <td>{{ $bkph->deleted_at->toDateString() }}</td>
                     <td>
                       <a href="/dashboard/bkphs/restore/{{ $bkph->id }}" class="badge bg-success"><span data-feather="rotate-ccw"></span></a>

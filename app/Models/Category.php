@@ -3,15 +3,22 @@
 namespace App\Models;
 
 use App\Models\Laporan;
+use App\Models\Bkph;
+use App\Models\Bulan;
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
 class Category extends Model
 {
     use HasFactory;
-    use Sluggable;
+    
+    // protected $fillable = [
+    //     'name',
+    //     'keterangan',
+    //     'image',
+    //     'excerpt',
+    // ];
 
     protected $guarded = ['id'];
 
@@ -20,12 +27,13 @@ class Category extends Model
         return $this->hasMany(Laporan::class);
     }
 
-    public function sluggable(): array
+    
+    protected $appends = ['image_url'];
+
+    public function getImageUrlAttribute()
     {
-        return [
-            'slug' => [
-                'source' => 'name'
-            ]
-        ];
+        return asset('storage/images/' . $this->image);
     }
+
+
 }

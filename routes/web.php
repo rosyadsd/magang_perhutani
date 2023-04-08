@@ -51,20 +51,20 @@ Route::post('/logout',[LoginController::class, 'logout']);
 
 // Laporans Route
 Route::get('/category', [LaporansController::class, 'index']);
-Route::get('/bkph', [LaporansController::class, 'index']);
-Route::get("/laporan/{laporan}",[LaporansController::class, 'getLaporan']);
 Route::get('/dashboard/laporans/recycle', [DashboardLaporanController::class, 'recycle']);
+Route::get('/dashboard/laporans/export', [DashboardLaporanController::class, 'export']);
+Route::get('/dashboard/laporans/{laporan:category_id}/jumlahdata', [DashboardLaporanController::class, 'jumlahdata']);
 Route::get('/dashboard/laporans/restore/{laporan}', [DashboardLaporanController::class, 'restore']);
 Route::post('/dashboard/laporans/delete/{laporan}', [DashboardLaporanController::class, 'delete']);
 Route::resource('/dashboard/laporans', DashboardLaporanController::class)->middleware('auth');
 
 // Categories Route
-Route::get('/category/{category:slug}',[LaporansController::class, 'show']);
+Route::get('/category/{category:id}',[LaporansController::class, 'show']);
+// Route::get('/category/{category:id}/bulan/{bulan:id}',[LaporansController::class, 'show']);
 Route::resource('/dashboard/categories', DashboardCategoryController::class)->except('show')->middleware('auth');
-Route::get('/dashboard/categories/fillSlug', [DashboardCategoryController::class, 'fillSlug']);
+// Route::get('/dashboard/categories/fillSlug', [DashboardCategoryController::class, 'fillSlug']);
 
 // Bkph Route
-Route::get('/bkph',[BkphController::class,'index']);
 Route::get('/dashboard/bkphs/recycle', [DashboardBkphController::class, 'recycle']);
 Route::get('/dashboard/bkphs/restore/{bkph}', [DashboardBkphController::class, 'restore']);
 Route::post('/dashboard/bkphs/delete/{bkph}', [DashboardBkphController::class, 'delete']);

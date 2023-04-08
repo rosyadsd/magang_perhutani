@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+// use \Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Models\Category;
 use App\Models\Laporan;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class DashboardCategoryController extends Controller
@@ -23,13 +24,22 @@ class DashboardCategoryController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => ['required','max:255'],
-            'slug' => ['required','unique:categories'],
-            'excerpt' => ['required']
+            'name' => 'required','max:255',
+            'keterangan' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'excerpt' => 'required',
         ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '_' . $image->getClientOriginalName();
+            $image->storeAs('public/images', $filename);
+            $validatedData['image'] = $filename;
+        }
 
         Category::create($validatedData);
 
+       
         return redirect('/dashboard/categories')->with('success','New Category has been added!');
     }
 
@@ -43,17 +53,35 @@ class DashboardCategoryController extends Controller
 
     public function update(Request $request, Category $category)
     {
-        $rules = [
-            'name' => ['required','max:255'],
-            'slug' => ['required','unique:categories'],
-            'excerpt' => ['required']
-        ];
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'keterangan' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'excerpt' => 'required',
+        ]);
 
-        if($request->slug != $category->slug){
-            $rules['slug'] = ['required','unique:categories'];
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '_' . $image->getClientOriginalName();
+            $image->storeAs('public/images', $filename);
+            $validatedData['image'] = $filename;
+    
+            // delete the old image file
+            Storage::delete('storage/images/' . $category->image);
         }
+    
+        $category->update($validatedData);
+        
+        // $rules = [
+        //     'name' => ['required','max:255'],
+        //     'excerpt' => ['required']
+        // ];
 
-        $validatedData = $request->validate($rules);
+        // if($request->slug != $category->slug){
+        //     $rules['slug'] = ['required','unique:categories'];
+        // }
+
+        // $validatedData = $request->validate($rules);
 
         Category::where('id', $category->id)->update($validatedData);
 
@@ -67,10 +95,10 @@ class DashboardCategoryController extends Controller
         return redirect('/dashboard/categories')->with('success', 'Category has been deleted');
     }
 
-    public function fillSlug(Request $request){
+    // public function fillSlug(Request $request){
 
-        $slug = SlugService::createSlug(Category::class, 'slug', $request->name);
+    //     $slug = SlugService::createSlug(Category::class, 'slug', $request->name);
 
-        return response()->json(['slug' => $slug]);
-    }
+    //     return response()->json(['slug' => $slug]);
+    // }
 }

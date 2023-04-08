@@ -26,6 +26,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Category Name</th>
+                <th scope="col">Keterangan</th>
                 <th scope="col">Created At</th>
                 <th scope="col">Action</th>
               </tr>
@@ -35,6 +36,7 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $category->name }}</td>
+                  <td>{{ $category->keterangan }}</td>
                   <td>{{ $category->created_at->toDateString() }}</td>
                   <td>
                     <a href="/dashboard/categories/{{ $category->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span> Edit</a>
@@ -47,35 +49,6 @@
   </div>
 </div>
 
-  {{-- Old Table --}}
-  {{-- <table id="category-table" class="table table-striped table-sm">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Category Name</th>
-        <th scope="col">Created At</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach($categories as $category)
-        <tr>
-          <td>{{ $loop->iteration }}</td>
-          <td>{{ $category->name }}</td>
-          <td>{{ $category->created_at->toDateString() }}</td>
-          <td>
-            <a href="/dashboard/categories/{{ $category->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span> Edit</a>
-            <form action="/dashboard/categories/{{ $category->id }}" method="POST" class="d-inline">
-              @method('delete')
-              @csrf
-              <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><span data-feather="trash-2"></span></button>
-            </form>
-          </td>
-        </tr>
-      @endforeach
-    </tbody>
-  </table> --}}
-</div>
 
     {{-- Data Tables --}}
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

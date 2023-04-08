@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Recycle Bin</h1>
+  <h1 class="h2">Tempat Sampah</h1>
 </div>
 
 <div class="table-responsive col-lg-12">
@@ -22,21 +22,33 @@
             <table class="table table-bordered" id="laporans-table">
               <thead class="table-dark">
                 <tr>
-                  <th scope="col">No.</th>
-                  <th scope="col">Title</th>
+                <th scope="col">No.</th>
+                  <th scope="col">BKPH</th>
+                  <th scope="col">Bulan</th>
+                  <th scope="col">RKAP</th>
+                  <th scope="col">RO</th>
+                  <th scope="col">Real</th>
+                  <th scope="col">%RKAP</th>
+                  <th scope="col">%RO</th>
                   <th scope="col">Category</th>
-                  {{-- <th scope="col">Created By</th> --}}
+                  <!-- {{-- <th scope="col">Created By</th> --}} -->
                   <th scope="col">Deleted At</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach($laporans as $laporan
+                @foreach($laporans as $laporan)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $laporan->title }}</td>
+                    <td>{{ $laporan->bkph->nama_bkph }}</td>
+                    <td>{{ $laporan->bulan->nama_bulan }}</td>
+                    <td>{{ $laporan->rkap }}</td>
+                    <td>{{ $laporan->ro }}</td>
+                    <td>{{ $laporan->real }}</td>
+                    <td>{{ $laporan->persen_rkap }}</td>
+                    <td>{{ $laporan->persen_ro }}</td>
                     <td>{{ $laporan->category->name }}</td>
-                    {{-- <td>{{ $laporan->author->name }}</td> --}}
+                    <!-- {{-- <td>{{ $laporan->author->name }}</td> --}} -->
                     <td>{{ $laporan->deleted_at->toDateString() }}</td>
                     <td>
                       <a href="/dashboard/laporans/restore/{{ $laporan->id }}" class="badge bg-success"><span data-feather="rotate-ccw"></span></a>

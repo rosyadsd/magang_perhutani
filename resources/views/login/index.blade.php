@@ -1,18 +1,17 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container mb-5">
+<div class="container pt-5">
   <div class="row justify-content-center">
     <div class="col-md-5">
         <main class="form-signin">
             <form action="/login" method="POST">
               @csrf
-                <div class="text-center">
-                    {{-- <img class="mb-4" src="https://learning-aic.aerofood.co.id/Elegantic/images/ALS.png" alt="" length="140" height="80"> --}}
-                    <img class="mb-4" src="/img/perhutani.png" alt="" length="140" height="80">
+                <div class="card-body text-center">
+                  
+                    <img class="mb-4" src="https://www.perhutani.co.id/wp-content/themes/perhutani2022/assets/images/logo.png" alt="" length="140" height="80pt">
                 </div>
-              <h2 class="h3 mb-3 fw-normal text-center">Login Admin</h2>
-
+               <h2 class="h3 mb-3 fw-normal text-center">Login Admin</h2>
               @if(session()->has('registerSuccess'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                   {{ session('registerSuccess') }}

@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bkphs', function (Blueprint $table) {
+        Schema::create('bulans', function (Blueprint $table) {
             $table->id();
-            $table->String('nama_bkph');
-            $table->String('alamat_bkph');
-            $table->String('email');
-            $table->softDeletes();
+            $table->String('nama_bulan');
+            $table->foreignId('category_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bkphs');
+        Schema::dropIfExists('bulans');
     }
 };
