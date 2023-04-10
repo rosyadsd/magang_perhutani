@@ -20,7 +20,7 @@
                 height: auto;
               }
               .rounded-top {
-                max-height: 300px;
+                max-height: 250px;
                  width: auto;
                }
             </style>

@@ -28,6 +28,7 @@ class DashboardCategoryController extends Controller
             'keterangan' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'excerpt' => 'required',
+            'satuan' => 'required',
         ]);
 
         if ($request->hasFile('image')) {
@@ -58,6 +59,7 @@ class DashboardCategoryController extends Controller
             'keterangan' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'excerpt' => 'required',
+            'satuan' => 'required',
         ]);
 
         if ($request->hasFile('image')) {
@@ -70,9 +72,6 @@ class DashboardCategoryController extends Controller
         if (isset($validatedData['image'])) {
             Storage::delete('public/images/' . $validatedData['image']);
         }
-            // delete the old image file
-            // Storage::delete('storage/images/' . $category->image);
-
 
             $validatedData['image'] = $filename;
         }
@@ -94,14 +93,14 @@ class DashboardCategoryController extends Controller
 
         Category::where('id', $category->id)->update($validatedData);
 
-        return redirect('/dashboard/categories')->with('success','Category has been updated!');
+        return redirect('/dashboard/categories')->with('sukses','Kategori Telah Berhasil Diperbaruhi');
     }
 
     public function destroy(Category $category)
     {
         Laporan::destroy($category->laporans);
         Category::destroy($category->id);
-        return redirect('/dashboard/categories')->with('success', 'Category has been deleted');
+        return redirect('/dashboard/categories')->with('success', 'Kategori Telah Berhasil Dihapus');
     }
 
     // public function fillSlug(Request $request){

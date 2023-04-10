@@ -8,6 +8,7 @@
         <div class="card mb-3 ">
           <h5 class="card-title fs-4 d-flex justify-content-center">{{ $title }}</h5>
           <h5 class="card-title fs-4 d-flex justify-content-center">{{ $keterangan}}</h5>
+          <h5 class="card-title fs-4 d-flex justify-content-">{{ $satuan}}</h5>
            <div class="col-md-12">
             
             <div class="chart-wrapper">
@@ -155,22 +156,22 @@
         }
       }
       },        
-      {
-        label: 'Jumlah RKAP KPH',
-        data: {!!json_encode($jumrkap)!!},
-        backgroundColor: function(context) {
-        let value = context.dataset.data[context.dataIndex];
-        if (value < 85) {
-          return warna1;
-        } else if (value >= 85 && value < 100) {
-          return warna2;
-        } else if (value >= 100 && value < 110) {
-          return warna3;
-        } else {
-          return warna4;
-        }
-      }
-      },
+      // {
+      //   label: 'Jumlah RKAP KPH',
+      //   data: {!!json_encode($jumrkap)!!},
+      //   backgroundColor: function(context) {
+      //   let value = context.dataset.data[context.dataIndex];
+      //   if (value < 85) {
+      //     return warna1;
+      //   } else if (value >= 85 && value < 100) {
+      //     return warna2;
+      //   } else if (value >= 100 && value < 110) {
+      //     return warna3;
+      //   } else {
+      //     return warna4;
+      //   }
+      // }
+      // },
     ]
     },
     options: {

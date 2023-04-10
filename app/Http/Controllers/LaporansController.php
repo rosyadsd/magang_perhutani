@@ -128,6 +128,7 @@ class LaporansController extends Controller
         return view('laporans', [
             'title' => $category->name,
             'keterangan' => $category->keterangan,
+            'satuan' => $category->satuan,
             'datas' => $datas,
             'bkph' => $databkph,
             'real' => $real_new,

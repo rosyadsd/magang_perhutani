@@ -1,4 +1,4 @@
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+<!-- <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="/dashboard">
     <img src="/img/perhutani.png" alt="" length="80" height="40" class="d-inline-block align-text-top">
     </a>
@@ -11,4 +11,4 @@
         <a class="nav-link px-3" href="/">Kembali Halaman User<span data-feather="arrow-right"></span></a>
       </div>
     </div>
-  </header>
+  </header> -->

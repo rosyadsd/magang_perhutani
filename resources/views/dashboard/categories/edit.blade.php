@@ -11,7 +11,7 @@
           @method('PUT')
           @csrf
           <div class="mb-3">
-            <label for="name" class="form-label">Category Name</label>
+            <label for="name" class="form-label">Nama Kategori</label>
             <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" autofocus value="{{ old('name', $category->name) }}">
             @error('name')
               <div class="invalid-feedback">
@@ -19,7 +19,36 @@
               </div>
             @enderror
           </div>
+
+          <div class="mb-3">
+            <label for="excerpt" class="form-label">Deskripsi</label>
+            @error('excerpt')
+              <p class="text-danger">{{ $message }}</p>
+            @enderror
+            <input id="excerpt" type="hidden" name="excerpt" value="{{ old('excerpt', $category->excerpt) }}">
+            <trix-editor input="excerpt"></trix-editor>
+          </div>
           
+          <div class="mb-3">
+            <label for="keterangan" class="form-label">Keterangan Update</label>
+            <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan', $category->keterangan) }}">
+            @error('keterangan')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+            @enderror
+          </div>
+          
+          <div class="mb-3">
+            <label for="satuan" class="form-label">Satuan Kategori</label>
+            <input type="text" class="form-control @error('satuan') is-invalid @enderror" id="satuan" name="satuan" autofocus value="{{ old('satuan', $category->satuan) }}">
+            @error('satuan')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+            @enderror
+          </div>
+
           <div class="mb-3">
               <label for="image" class="form-label">Gambar Kategori</label>
               <input type="hidden" name="oldImage" value="{{ $category->image }}">
@@ -37,25 +66,6 @@
               @enderror
             </div>
 
-          <div class="mb-3">
-            <label for="keterangan" class="form-label">Keterangan Update</label>
-            <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan', $category->keterangan) }}">
-            @error('keterangan')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-            @enderror
-          </div>
-
-          <div class="mb-3">
-            <label for="excerpt" class="form-label">Body</label>
-            @error('excerpt')
-              <p class="text-danger">{{ $message }}</p>
-            @enderror
-            <input id="excerpt" type="hidden" name="excerpt" value="{{ old('excerpt', $category->excerpt) }}">
-            <trix-editor input="excerpt"></trix-editor>
-          </div>
-          
 
           <button type="submit" class="btn btn-primary">Update</button>
       </form>
