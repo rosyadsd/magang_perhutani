@@ -34,10 +34,7 @@
             BKPH
           </a>
         </li>
-        
-        
       </ul>
-
       @can('superadmin')
       <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
         <span>Super Administrator</span>
@@ -85,7 +82,6 @@
         </li>
       </ul>
     </div>
-
     <script>
       let list = document.querySelectorAll('.list');
       for (let i=0; 1<list.lenght; i++){
@@ -98,7 +94,4 @@
         }
       }
     </script>
-
-
-
   </nav>
