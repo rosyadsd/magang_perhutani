@@ -11,7 +11,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardLaporanController;
 use App\Http\Controllers\DashboardBkphController;
 use App\Http\Controllers\DashboardFeedbackController;
-use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SuperAdminController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -40,9 +40,8 @@ Route::get('/dashboard', function(){
 })->middleware('auth');
 
 // Feedback Route
-Route::get('/feedback',[FeedbackController::class,'index']);
-Route::post('/feedback',[FeedbackController::class, 'store']);
-Route::resource('/dashboard/feedbacks', DashboardFeedbackController::class)->except(['create', 'edit', 'update'])->middleware('auth');
+Route::get('/tentang',[TentangController::class,'index']);
+
 
 // Login Route
 Route::get('/login',[LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -62,7 +61,6 @@ Route::resource('/dashboard/laporans', DashboardLaporanController::class)->middl
 Route::get('/category/{category:id}',[LaporansController::class, 'show']);
 // Route::get('/category/{category:id}/bulan/{bulan:id}',[LaporansController::class, 'show']);
 Route::resource('/dashboard/categories', DashboardCategoryController::class)->except('show')->middleware('auth');
-// Route::get('/dashboard/categories/fillSlug', [DashboardCategoryController::class, 'fillSlug']);
 
 // Bkph Route
 Route::get('/dashboard/bkphs/recycle', [DashboardBkphController::class, 'recycle']);

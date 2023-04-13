@@ -41,7 +41,7 @@ class DashboardCategoryController extends Controller
         Category::create($validatedData);
 
        
-        return redirect('/dashboard/categories')->with('success','New Category has been added!');
+        return redirect('/dashboard/categories')->with('success','Kategori Baru Telah Berhasil Ditambahkan!');
     }
 
 
@@ -80,20 +80,10 @@ class DashboardCategoryController extends Controller
     
         $category->update($validatedData);
         
-        // $rules = [
-        //     'name' => ['required','max:255'],
-        //     'excerpt' => ['required']
-        // ];
-
-        // if($request->slug != $category->slug){
-        //     $rules['slug'] = ['required','unique:categories'];
-        // }
-
-        // $validatedData = $request->validate($rules);
 
         Category::where('id', $category->id)->update($validatedData);
 
-        return redirect('/dashboard/categories')->with('sukses','Kategori Telah Berhasil Diperbaruhi');
+        return redirect('/dashboard/categories')->with('sukses','Kategori Telah Berhasil Diperbarui');
     }
 
     public function destroy(Category $category)
@@ -103,10 +93,4 @@ class DashboardCategoryController extends Controller
         return redirect('/dashboard/categories')->with('success', 'Kategori Telah Berhasil Dihapus');
     }
 
-    // public function fillSlug(Request $request){
-
-    //     $slug = SlugService::createSlug(Category::class, 'slug', $request->name);
-
-    //     return response()->json(['slug' => $slug]);
-    // }
 }

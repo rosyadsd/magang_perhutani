@@ -29,9 +29,9 @@ class ChangePasswordController extends Controller
                 'password' => bcrypt($request->password)
             ]);
     
-            return back()->with('success','password successfully updated');
+            return back()->with('success','Password Telah Berhasil Diperbarui');
         }else{
-            return back()->with('warning','Password not match');
+            return back()->with('warning','Password tidak cocok');
         }
     }
 }

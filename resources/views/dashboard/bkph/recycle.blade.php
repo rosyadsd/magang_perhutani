@@ -16,7 +16,7 @@
     <div class="card mb-2">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Deleted BKPH
+            BKPH Terhapus
         </div>
         <div class="card-body">
             <table class="table table-bordered" id="bkph-table">
@@ -53,9 +53,8 @@
     </div>
   </div>
 
-<a href="/dashboard/bkphs" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="arrow-left"></span> Back</a>
+<a href="/dashboard/bkphs" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="arrow-left"></span> Kembali</a>
 
-    {{-- Data Tables --}}
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
     <script>

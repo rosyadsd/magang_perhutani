@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Storage;
 use App\Models\Laporan;
 use App\Models\Category;
 use App\Models\Bkph;
@@ -15,19 +14,12 @@ class DashboardLaporanController extends Controller
 
     public function index()
     {
-        // $daftarkategori = Category::all();
-        // $datakategori = [];
-        // foreach ($daftarkategori as $kt) {
-        //     $datakategori[] = $kt->name;
-        // }
-
-        //  dd($datakategori);
         return view('dashboard.laporans.index', [
             'laporans' => Laporan::all(), 
             'categories' => Category::all(), 
             'bkphs' => Bkph::all(),
             'bulans' => Bulan::all(),
-            // 'kategori' => $datakategori,
+        
 
         ]);
     }
@@ -46,15 +38,15 @@ class DashboardLaporanController extends Controller
         ]);
     }
 
-    public function export()
-    {
-        // return view('dashboard.laporans.export',[
-        //     'categories' => Category::all(), 
-        //     'bkphs' => Bkph::all(),
+    // public function export()
+    // {
+    //     // return view('dashboard.laporans.export',[
+    //     //     'categories' => Category::all(), 
+    //     //     'bkphs' => Bkph::all(),
 
             
-        // ]);
-    }
+    //     // ]);
+    // }
 
     
     public function store(Request $request)
@@ -156,14 +148,14 @@ class DashboardLaporanController extends Controller
 
         Laporan::where('id', $laporan->id)->update($validatedData);
 
-        return redirect('/dashboard/laporans')->with('success', 'Laporan has been updated');
+        return redirect('/dashboard/laporans')->with('success', 'Laporan Telah Berhasil Diperbarui');
     }
 
     public function destroy(Laporan $laporan)
     {
 
         Laporan::destroy($laporan->id);
-        return redirect('/dashboard/laporans')->with('success', 'Laporan has been deleted');
+        return redirect('/dashboard/laporans')->with('success', 'Laporan Telah Berhasil Dihapus');
     }
 
     public function recycle()

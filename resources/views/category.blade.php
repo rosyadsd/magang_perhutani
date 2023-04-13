@@ -24,12 +24,16 @@
                  width: auto;
                }
             </style>
-            <img src="{{ $category->image_url }}" class="img-fluid rounded-top" alt="" class="img-fluid" >
-                 
+            <img src="{{ $category->image_url }}" class="img-fluid rounded-top" alt="" class="img-fluid">
+            <style>
+              .img-fluid {
+                filter: brightness(65%);
+              }
+            </style>
                 <div class="card-body text-center">
                     <h5 class="card-title fs-4 d-flex justify-content-center">{{ $category->name }}</h5>
                     <p class="card-text">{!! $category->excerpt !!}</p>
-                    <a href="category/{{ $category->id }}" class="  btn btn-primary px-5 ">Buka</a>
+                    <a href="category/{{ $category->id }}" class="  btn btn-success px-5 ">Buka</a>
                 </div>
             </div>
           </div>

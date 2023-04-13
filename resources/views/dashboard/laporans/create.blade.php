@@ -4,8 +4,8 @@
     <h1 class="h2">Penambahan Data Laporan</h1>
 </div>
 
-<div class="row mb-5">
-    <div class="col-lg-8">
+<div class="row-responsive mb-5">
+    <div class="col-lg-6">
         <form method="POST" action="/dashboard/laporans" class="mb-5" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">

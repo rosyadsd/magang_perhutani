@@ -1,11 +1,11 @@
 @extends('dashboard.layouts.main')
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Laporan Kategori</h1>
+  <h1 class="h2">Data Kategori</h1>
 </div>
 
 <div class="table-responsive col-lg-8">
-  <a href="/dashboard/categories/create" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="plus"></span> Kategori Baru</a>
+  <a href="/dashboard/categories/create" class="btn btn-success mb-3 mx-1"><span class="mb-1" data-feather="plus-square"></span> Kategori Baru</a>
   @if(session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       {{ session('success') }}
@@ -18,13 +18,13 @@
   <div class="card mb-4">
       <div class="card-header">
           <i class="fas fa-table me-1"></i>
-          All Categories
+          Semua Kategori
       </div>
       <div class="card-body">
           <table class="table table-bordered" id="category-table">
             <thead class="table-dark">
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">No.</th>
                 <th scope="col">Nama Kategori</th>
                 <th scope="col">Keterangan</th>
                 <th scope="col">Created At</th>
@@ -54,11 +54,14 @@
   </div>
 </div>
 
-
-    {{-- Data Tables --}}
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
-    <script>
-    $('#category-table').DataTable({});
-    </script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#category-table').DataTable({
+            paging: true,
+            ordering: true,
+            searching: true
+        });
+    });
 @endsection

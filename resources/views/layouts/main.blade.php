@@ -27,7 +27,7 @@
   </head>
   <body class="d-flex flex-column min-vh-100 gradient2">
     @include('partials.navbar')
-      <div class="container pt-4">
+      <div class="container">
         @yield('container')
     </div>
 

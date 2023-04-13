@@ -3,7 +3,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light gradient shadow-sm" >
+<nav class="navbar fixed-top navbar-expand-lg navbar-light gradient shadow" >
     
   <div class="container">    
     <a class="navbar-brand" href="/">
@@ -23,7 +23,7 @@
             <a class="nav-link {{ Request::is('category*') ? 'active' : '' }}" href="/category" style="font-size: 18px; font-weight: 600;">Laporan</a>
           </li>
           <li class="nav-item" id="nav-item-3" onmouseover="addUnderline(this.id)" onmouseleave="removeUnderline(this.id)" >
-            <a class="nav-link {{ Request::is('feedback*') ? 'active' : '' }}" href="/feedback" style="font-size: 18px; font-weight: 600">Tentang Kami</a>
+            <a class="nav-link {{ Request::is('tentang*') ? 'active' : '' }}" href="/tentang" style="font-size: 18px; font-weight: 600">Tentang Kami</a>
           </li>
           </ul>
 

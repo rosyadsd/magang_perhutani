@@ -34,23 +34,22 @@
             BKPH
           </a>
         </li>
-        
-        
       </ul>
-
+      
       @can('superadmin')
       <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-        <span>Super Administrator</span>
+      <spans style="color:white">Super Administrator</spans>
       </h6>
       <ul class="nav flex-column">
         <li class="list">
           <a class="nav-link {{ Request::is('dashboard/users*') ? '' : ''}}" href="/dashboard/users">
             <span data-feather="users" class="align-text-bottom"></span>
-            Administrator List
+            Daftar Administrator
           </a>
         </li>
       </ul> 
       @endcan
+      
       <h1 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
         <spans style="color:white">Profile</spans>
       </h1>
@@ -58,13 +57,13 @@
         <li class="list">
           <a class="nav-link {{ Request::is('dashboard/changepassword*') ? '' : ''}}" href="/dashboard/changepassword">
             <span data-feather="settings" class="align-text-bottom"></span>
-            Change Password
+            Ubah Password
           </a>
         </li>
         <li class="list">
           <a class="nav-link {{ Request::is('/') ? '' : ''}}"  aria-current="page" href="/">
             <span data-feather="arrow-right" class="align-text-bottom"></span>
-            Kembali ke halaman User
+            Kembali ke halaman user
           </a>
         </li>
         <br>
@@ -85,7 +84,6 @@
         </li>
       </ul>
     </div>
-
     <script>
       let list = document.querySelectorAll('.list');
       for (let i=0; 1<list.lenght; i++){
@@ -98,7 +96,4 @@
         }
       }
     </script>
-
-
-
   </nav>

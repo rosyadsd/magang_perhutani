@@ -1,12 +1,12 @@
 @extends('dashboard.layouts.main')
 @section('container')
 <div class="row justify-content-center mt-5">
-    <h1 class="h3 mb-3 fw-normal text-center">New Administrator</h1>
+    <h1 class="h3 mb-3 fw-normal text-center">Administrator Baru</h1>
     <div class="col-lg-5">
         <form action="/dashboard/users" method="POST">
             @csrf
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
+              <label for="name" class="form-label">Nama</label>
               <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ old('name') }}" required>
               @error('name')
                 <div class="invalid-feedback">
@@ -24,7 +24,7 @@
               @enderror
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
+              <label for="email" class="form-label">Alamat Email</label>
               <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{ old('email') }}" required>
               @error('email')
                 <div class="invalid-feedback">
@@ -41,7 +41,7 @@
                 </div>
               @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Kirim</button>
           </form>
     </div>
 </div>

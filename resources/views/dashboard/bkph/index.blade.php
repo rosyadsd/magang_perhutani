@@ -4,9 +4,9 @@
   <h1 class="h2">Data BKPH</h1>
 </div>
 
-<div class="table-responsive col-lg-12">
-    <a href="/dashboard/bkphs/create" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="plus"></span> Tambahkan Data</a>
-    <a href="/dashboard/bkphs/recycle" class="btn btn-success mb-3"><span class="mb-1" data-feather="trash"></span> Tempat Sampah</a>
+<div class="table-responsive col-lg-9">
+    <a href="/dashboard/bkphs/create" class="btn btn-success mb-3 mx-1"><span class="mb-1" data-feather="plus-square"></span> Tambahkan Data</a>
+    <a href="/dashboard/bkphs/recycle" class="btn btn-danger mb-3"><span class="mb-1" data-feather="trash"></span> Tempat Sampah</a>
   @if(session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       {{ session('success') }}
@@ -58,7 +58,12 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
     <script>
-    $('#bkph-table').DataTable({});
-    </script>
+    $(document).ready(function() {
+        $('#bkph-table').DataTable({
+            paging: true,
+            ordering: true,
+            searching: true
+        });
+    });
 
 @endsection

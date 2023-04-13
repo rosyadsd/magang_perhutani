@@ -5,8 +5,8 @@
     <h1 class="h2">Menambahkan Kategori Baru</h1>
 </div>
 
-<div class="row mb-5">
-    <div class="col-lg-8">
+<div class="row-responsive mb-5">
+    <div class="col-lg-6">
         <form action="/dashboard/categories" method="POST" enctype="multipart/form-data">
             @csrf
         <div class="mb-3">
@@ -59,7 +59,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Menambahkan Kategori</button>
+        <button type="submit" class="btn btn-primary">Tambahkan Kategori</button>
         </form>
     </div>
 </div>

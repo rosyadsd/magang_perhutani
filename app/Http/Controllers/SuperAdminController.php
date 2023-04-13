@@ -34,13 +34,13 @@ class SuperAdminController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
         User::create($validatedData);
-        return redirect('/dashboard/users')->with('success','New Admin has been added');
+        return redirect('/dashboard/users')->with('success','Admin baru telah ditambahkan');
     }
 
     public function destroy(User $user)
     {
         User::destroy($user->id);
-        return redirect('/dashboard/users')->with('success', 'Admin has been deleted');
+        return redirect('/dashboard/users')->with('success', 'Admin telah dihapus');
     }
 
     public function recycle(){
@@ -52,12 +52,12 @@ class SuperAdminController extends Controller
     public function restore($laporanId)
     {
         User::onlyTrashed()->find($laporanId)->restore();
-        return redirect('/dashboard/users/recycle')->with('success', 'Admin has been restored');
+        return redirect('/dashboard/users/recycle')->with('success', 'Admin telah dikembalikan');
     }
 
     public function delete($userID)
     {
         User::onlyTrashed()->find($userID)->forceDelete();
-        return redirect('/dashboard/users/recycle')->with('success', 'Admin has been deleted');
+        return redirect('/dashboard/users/recycle')->with('success', 'Admin telah dihapus');
     }
 }

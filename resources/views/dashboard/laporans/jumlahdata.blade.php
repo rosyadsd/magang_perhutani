@@ -11,7 +11,7 @@
     <div class="card mb-2">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Nilai Rata Rata Dari Kategori
+            Nilai Rata-Rata Dari Kategori
         </div>
         <div class="card-body">
             <table class="table table-bordered" id="laporans-table">
@@ -39,7 +39,7 @@
     </div>
   </div>
 
-<a href="/dashboard/laporans" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="arrow-left"></span> Back</a>
+<a href="/dashboard/laporans" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="arrow-left"></span> Kembali</a>
 
     {{-- Data Tables --}}
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

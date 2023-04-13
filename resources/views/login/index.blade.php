@@ -3,15 +3,15 @@
 @section('container')
 <div class="container pt-5">
   <div class="row justify-content-center">
-    <div class="col-md-5">
+    <div class="col-md-5 py-5">
         <main class="form-signin">
             <form action="/login" method="POST">
               @csrf
                 <div class="card-body text-center">
                   
-                    <img class="mb-4" src="https://www.perhutani.co.id/wp-content/themes/perhutani2022/assets/images/logo.png" alt="" length="140" height="80pt">
+                    <img class="mb-4" src="https://www.perhutani.co.id/wp-content/themes/perhutani2022/assets/images/logo.png" style="" alt="" length="140" height="80pt">
                 </div>
-               <h2 class="h3 mb-3 fw-normal text-center">Login Admin</h2>
+              
               @if(session()->has('registerSuccess'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                   {{ session('registerSuccess') }}
@@ -44,7 +44,7 @@
                 </div>
                 @enderror
               </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+              <button class="w-100 btn btn-lg btn-success" type="submit">Login</button>
             </form>
             {{-- <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Now!</a></small> --}}
           </main>

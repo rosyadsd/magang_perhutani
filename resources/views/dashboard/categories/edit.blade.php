@@ -5,8 +5,8 @@
     <h1 class="h2">Edit Category</h1>
 </div>
 
-<div class="row mb-5">
-  <div class="col-lg-8">
+<div class="row-responsive mb-5">
+  <div class="col-lg-6">
       <form action="/dashboard/categories/{{ $category->id }}" method="POST" enctype="multipart/form-data">
           @method('PUT')
           @csrf

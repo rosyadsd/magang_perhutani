@@ -17,14 +17,14 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Deleted Administrators
+            Administrator Terhapus
         </div>
         <div class="card-body">
             <table class="table table-bordered" id="administrator-table">
               <thead class="table-dark">
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
+                  <th scope="col">No.</th>
+                  <th scope="col">Nama</th>
                   <th scope="col">Username</th>
                   <th scope="col">Email</th>
                   <th scope="col">Deleted At</th>
@@ -55,7 +55,7 @@
   </div>
 </div>
 
-<a href="/dashboard/users" class="btn btn-primary mb-3"><span class="mb-1" data-feather="arrow-left"></span> Back</a>
+<a href="/dashboard/users" class="btn btn-primary mb-3"><span class="mb-1" data-feather="arrow-left"></span> Kembali</a>
 
     {{-- Data Tables --}}
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

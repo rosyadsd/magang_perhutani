@@ -26,12 +26,12 @@ class DashboardBkphController extends Controller
         $validatedData = $request->validate([
             'nama_bkph' => 'required|max:255',
             'alamat_bkph' => 'required',
-            'no_telepon' => 'required',
+            'email' => 'required',
         ]);
 
         Bkph::create($validatedData);
 
-        return redirect('/dashboard/bkphs')->with('success', 'New Bkph has been added');
+        return redirect('/dashboard/bkphs')->with('success', 'BKPH Baru Telah Berhasil Ditambahkan');
     }
 
     public function edit(Bkph $bkph)
@@ -47,17 +47,17 @@ class DashboardBkphController extends Controller
         $validatedData = $request->validate([
             'nama_bkph' => 'required|max:255',
             'alamat_bkph' => 'required',
-            'no_telepon' => 'required',
+            'email' => 'required',
         ]);
 
         Bkph::where('id', $bkph->id)->update($validatedData);
-        return redirect('/dashboard/bkphs')->with('success', 'Bkph has been updated');
+        return redirect('/dashboard/bkphs')->with('success', 'BKPH Telah Berhasil Diperbarui');
     }
 
     public function destroy(Bkph $bkph)
     {
         Bkph::destroy($bkph->id);
-        return redirect('/dashboard/bkphs')->with('success', 'Bkph has been deleted');
+        return redirect('/dashboard/bkphs')->with('success', 'BKPH Telah Berhasil Dihapus');
     }
 
     public function recycle()
@@ -70,12 +70,12 @@ class DashboardBkphController extends Controller
     public function restore($bkphId)
     {
         Bkph::onlyTrashed()->find($bkphId)->restore();
-        return redirect('/dashboard/bkphs/recycle')->with('success', 'Bkph has been restored');
+        return redirect('/dashboard/bkphs/recycle')->with('success', 'BKPH Telah Berhasil Dikembalikan');
     }
 
     public function delete($bkphId)
     {
         Bkph::onlyTrashed()->find($bkphId)->forceDelete();
-        return redirect('/dashboard/bkphs/recycle')->with('success', 'Bkph has been deleted');
+        return redirect('/dashboard/bkphs/recycle')->with('success', 'BKPH Telah Berhasil Dihapus');
     }
 }

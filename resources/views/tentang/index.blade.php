@@ -1,6 +1,6 @@
 @extends("layouts.main")
  <section class="bgimage" >
-  <div class="container-fluid" >
+  <div class="container-fluid >
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3>Tentang Perhutani KPH Kendal</h3>
@@ -83,9 +83,9 @@
             <li class="p fz">  -> Sebelah Barat: Wilayah Kabupaten Batang (KPH Pekalongan Timur)
           </li><br />
           <li class="p fz"> <strong>Luas kawasan hutan KPH Kendal</strong> jika dibagi berdasarkan fungsi kawasan terbagi menjadi 3 kawasan yakni: 
-            <li class="p fz">  ->	Kawasan untuk produksi: 15.877,56 ha (77%)
-            <li class="p fz">	 -> Kawasan perlindungan: 2.688,57 ha (13%)
-            <li class="p fz">  ->	Kawasan untuk penggunaan lain: 2.137,15 ha (10%)
+            <li class="p fz">  ->	Kawasan untuk produksi: 15.705,46 ha (75%)
+            <li class="p fz">	 -> Kawasan perlindungan: 2.682,11 ha (13%)
+            <li class="p fz">  ->	Kawasan untuk penggunaan lain: 2.435,85 ha (12%)
           </li><br />
         </ul>
       </div>							

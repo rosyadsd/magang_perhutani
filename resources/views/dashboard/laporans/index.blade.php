@@ -1,13 +1,12 @@
 @extends('dashboard.layouts.main')
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Penginputan Data Laporan</h1>
+  <h1 class="h2">Data Laporan</h1>
 </div>
 
 <div class="table-responsive col-lg-12">
-    <a href="/dashboard/laporans/create" class="btn btn-primary mb-3 mx-1"><span class="mb-1" data-feather="plus"></span> Tambahkan Data</a>
-    <a href="/dashboard/laporans/recycle" class="btn btn-success mb-3"><span class="mb-1" data-feather="trash"></span> Tempat Sampah</a>
-    <a href="/dashboard/laporans/export" class="btn btn-primary mb-3 mx-1" class="fas fa-file-download"><span class="mb-1" data-feather="trash"></span> Export Exel</a>
+    <a href="/dashboard/laporans/create" class="btn btn-success mb-3 mx-1"><span class="mb-1" data-feather="plus-square"></span> Tambahkan Data</a>
+    <a href="/dashboard/laporans/recycle" class="btn btn-danger mb-3"><span class="mb-1" data-feather="trash"></span> Tempat Sampah</a>
 
   @if(session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -50,7 +49,6 @@
                     <td>{{ number_format($laporan->persen_rkap, 2) }}%</td>
                     <td>{{ number_format($laporan->persen_ro, 2) }}%</td>
                     <td>{{ $laporan->category->name }}</td>
-                    <!-- {{-- <td>{{ $laporan->author->name }}</td> --}} -->
                     <td>{{ $laporan->created_at->toDateString() }}</td>
                     <td>
                       <a href="/dashboard/laporans/{{ $laporan->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
@@ -63,12 +61,12 @@
                   </tr>
                 @endforeach
               </tbody>
-            </table>
+            </table> 
         </div>
     </div>
 </div>
   
-<div class="container-fluid px-1 mt-1">
+<div class="container-responsive px-1 mt-1 col-lg-5 ">
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
@@ -90,7 +88,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $laporan->name }}</td>
                     <td>
-                    <a href="/dashboard/laporans/{{ $laporan->id }}/jumlahdata" class="badge bg-warning"><span class="mb-1" data-feather="plus"></span> Hasil Jumlah Data</a>
+                    <a href="/dashboard/laporans/{{ $laporan->id }}/jumlahdata" class="badge bg-success"><span class="mb-1" data-feather="eye"></span> Hasil Jumlah Data</a>
                     </td>
                   </tr>
                   @endforeach
@@ -99,14 +97,17 @@
         </div>
     </div>
 </div>
-  
-  
 
-    {{-- Data Tables --}}
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
-    <script>
-    $('#laporans-table').DataTable({});
-    </script>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#laporans-table').DataTable({
+            paging: true,
+            ordering: true,
+            searching: true
+        });
+    });
+</script>
 @endsection
+

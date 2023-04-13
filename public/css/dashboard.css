@@ -70,7 +70,7 @@ padding: 12px 15px;
   height: 345px; /* ubah ukuran sesuai keinginan */
   margin: 20px; /* tambahkan margin sesuai keinginan */
   border-radius: 10px; /* tambahkan border-radius sesuai keinginan */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* tambahkan bayangan box-shadow sesuai keinginan */
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.316); /* tambahkan bayangan box-shadow sesuai keinginan */
   
 }
 
@@ -80,7 +80,7 @@ padding: 12px 15px;
   height: 345px; /* ubah ukuran sesuai keinginan */
   margin: 20px; /* tambahkan margin sesuai keinginan */
   border-radius: 10px; /* tambahkan border-radius sesuai keinginan */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* tambahkan bayangan box-shadow sesuai keinginan */
+  box-shadow:0 0 13px rgba(0, 0, 0, 0.316); /* tambahkan bayangan box-shadow sesuai keinginan */
 }
 
 .container{
@@ -182,7 +182,7 @@ body {
 
 /* Style the counter cards */
 .curd {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.423); /* this adds the "card" effect */
   padding: 16px;
   margin: 0 auto;
   text-align: center;
